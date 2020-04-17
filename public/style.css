@@ -1,37 +1,57 @@
 .okr{
     color:white;
 }
-.title{
-    color:black;
-}
 .section_wrap{
     display:flex;
+    margin:40px;
 }
 .title{
+    color:black;
     font-size:40px;
-    padding:20px 8px;
-    margin:20px;
-    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100px;
 }
 .content{
     padding:8px;
 }
 .objective{
-    margin:12px;
+    margin:36px auto;
+    width:200px;
+    text-align:center;
 }
-.key_result_gather{
-    display:flex;
+.key_result{
+    text-align:center;
+    margin:0 auto;
 }
 .company{
     background-color: red;
-    margin:12px;
 }
 .group{
     background-color: orange;
-    margin:12px;
 }
 .individual{
     background-color: lime;
-    margin:12px;
+}
+.other_than_border_right{
+    height:150px;
+    width:150px;
+    border:solid silver;
+    border-width:3px 0 3px 3px;
+    margin:40px;
+}
+.wrap_objective{
+    width:300px;
+}
+
+.top_objective{
+    width:100%;
+}
+.flex{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
 }
 
