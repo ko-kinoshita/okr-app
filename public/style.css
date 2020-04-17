@@ -1,3 +1,9 @@
+.okr{
+    color:white;
+}
+.title{
+    color:black;
+}
 .section_wrap{
     display:flex;
 }
