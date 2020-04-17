@@ -6,8 +6,10 @@
         <h1 class="title">会社</h1>
         <div class="company_objective">
             <div class="company objective">
-                <h2 class="content">objective</h2>
-                <p class="content">(目標)</p>
+                @foreach($items as $item)
+                <h2 class="content">{{ $item->id }}</h2>
+                <p class="content">{{ $item->objective }}</p>
+                @endforeach
             </div>
 
             <div class="key_result_gather">
