@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        return view('home.index');
+        $user = Auth::user();
+        $param = ['user' => $user];
+        return view('home.index',$param);
     }
     public function add(Request $request)
     {

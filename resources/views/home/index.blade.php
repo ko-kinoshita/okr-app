@@ -1,6 +1,30 @@
 @extends('home.app')
 
 @section('content')
+
+@if (Auth::check())
+
+<p>User {{ $user->name . '(' . $user->email .')'}}</p>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="{{ route('logout') }}"
+        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+        {{ __('Logout') }}
+    </a>
+
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
+</div>
+
+@else
+
+<p>ログインしてません</p>
+<a href="/login">ログイン</a>
+<a href="/register">登録</a>
+
+@endif
+
 <div class="okr">
     <section class="section_wrap">
         <h1 class="title">会社</h1>
