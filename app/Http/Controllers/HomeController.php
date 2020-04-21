@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        return view('home.index');
+        $objects = DB::table('objective')->get();
+        $results = DB::table('key_result')->get();
+        return view('home.index',
+            ['objects'=>$objects],['results'=>$results]);
     }
     public function add(Request $request)
     {

@@ -8,23 +8,17 @@
         <div class="other_than_border_right"></div>
         <div class="top_objective company_key_result">
             <div class="company objective">
-                <h2 class="content">objective</h2>
-                <p class="content">(目標)</p>
+                @foreach($objects as $object)
+                    <p class="content">{{ $object->objective }}</p>
+                @endforeach
             </div>
 
             <ul class="flex">
+                @foreach($results as $result)
                 <li class="company key_result top_key_result">
-                    <h2 class="content">Key Result</h2>
-                    <p class="content">(主な結果)</p>
+                    <p class="content">{{ $result->key_result }}</p>
                 </li>
-                <li class="company key_result top_key_result">
-                    <h2 class="content">Key Resul</h2>
-                    <p class="content">(主な結果)</p>
-                </li>
-                <li class="company key_result top_key_result">
-                    <h2 class="content">Key Resul</h2>
-                    <p class="content">(主な結果)</p>
-                </li>
+                @endforeach
             </ul>
         </div>
     </section>
@@ -33,57 +27,18 @@
         <h1 class="title">部門</h1>
         <div class="other_than_border_right"></div>
         <ul class="flex">
+            @foreach($objects as $object)
             <li class="wrap_objective">
                 <div class="group objective">
-                    <h2 class="group content">objective</h2>
-                    <p class="group content">(目標)</p>
+                    <p class="group content">{{ $object->group_objective }}</p>
                 </div>
-
+            @endforeach
                 <ul class="flex ">
+                @foreach($results as $result)
                     <li class="group key_result">
-                        <h2 class="content">Key Result</h2>
-                        <p class="content">(主な結果)</p>
+                        <p class="content">{{ $result->group_key_result }}</p>
                     </li>
-                    <li class="group key_result">
-                        <h2 class="content">Key Resul</h2>
-                        <p class="content">(主な結果)</p>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="wrap_objective">
-                <div class="group objective">
-                    <h2 class="group content">objective</h2>
-                    <p class="group content">(目標)</p>
-                </div>
-
-                <ul class="flex ">
-                    <li class="group key_result">
-                        <h2 class="content">Key Result</h2>
-                        <p class="content">(主な結果)</p>
-                    </li>
-
-                </ul>
-            </li>
-            <li class="wrap_objective">
-                <div class="group objective">
-                    <h2 class="group content">objective</h2>
-                    <p class="group content">(目標)</p>
-                </div>
-
-                <ul class="flex ">
-                    <li class="group key_result">
-                        <h2 class="content">Key Result</h2>
-                        <p class="content">(主な結果)</p>
-                    </li>
-                    <li class="group key_result">
-                        <h2 class="content">Key Resul</h2>
-                        <p class="content">(主な結果)</p>
-                    </li>
-                    <li class="group key_result">
-                        <h2 class="content">Key Resul</h2>
-                        <p class="content">(主な結果)</p>
-                    </li>
+                @endforeach
                 </ul>
             </li>
         </ul>
@@ -93,60 +48,20 @@
         <h1 class="title">個人</h1>
         <div class="other_than_border_right"></div>
         <ul class="flex">
+        @foreach($objects as $object)
             <li class="wrap_objective">
                 <div class="individual objective">
-                    <h2 class="content">objective</h2>
-                    <p class="content">(目標)</p>
+                    <p class="content">{{ $object->individual_objective  }}</p>
                 </div>
-
                 <ul class="flex ">
+                @foreach($results as $result)
                     <li class="individual key_result">
-                        <h2 class="content">Key Result</h2>
-                        <p class="content">(主な結果)</p>
+                        <p class="content">{{ $result->individual_key_result }}</p>
                     </li>
-                    <li class="individual key_result">
-                        <h2 class="content">Key Resul</h2>
-                        <p class="content">(主な結果)</p>
-                    </li>
-                    <li class="individual key_result">
-                        <h2 class="content">Key Resul</h2>
-                        <p class="content">(主な結果)</p>
-                    </li>
+                @endforeach
                 </ul>
             </li>
-        
-            <li class="wrap_objective">
-                <div class="individual objective">
-                    <h2 class="content">objective</h2>
-                    <p class="content">(目標)</p>
-                </div>
-
-                <ul class="flex ">
-                    <li class="individual key_result">
-                        <h2 class="content">Key Result</h2>
-                        <p class="content">(主な結果)</p>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="wrap_objective">
-                <div class="individual objective">
-                    <h2 class="content">objective</h2>
-                    <p class="content">(目標)</p>
-                </div>
-
-                <ul class="flex ">
-                    <li class="individual key_result">
-                        <h2 class="content">Key Result</h2>
-                        <p class="content">(主な結果)</p>
-                    </li>
-                    <li class="individual key_result">
-                        <h2 class="content">Key Resul</h2>
-                        <p class="content">(主な結果)</p>
-                    </li>
-
-                </ul>
-            </li>
+        @endforeach
         </ul>
     </section>
 </div>
