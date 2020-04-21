@@ -14,6 +14,10 @@ class DatabaseSeeder extends Seeder
         $this->call([
             objectiveTableSeeder::class,
             KeyResultTableSeeder::class,
+            GroupKeyResultSeeder::class,
+            GroupObjectiveSeeder::class,
+            IndividualKeyResultSeeder::class,
+            IndividualObjectiveSeeder::class,
         ]);
     }
 }
