@@ -59,7 +59,8 @@
 header{
     background-color: #eee;
     display:flex;
+    height:60px;
 }
-header .dropdown-item{
+header .dropdown-menu{
     font-size:40px;
 }

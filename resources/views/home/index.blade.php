@@ -22,9 +22,10 @@
 
 @else
 <header>
-    <p>ログインしてません</p>
-    <a href="/login">ログイン</a>
-    <a href="/register">登録</a>
+    <div class="dropdown-menu">
+        <a href="/login" >ログイン</a>
+        <a href="/register">登録</a>
+    </div>
 </header>
 
 

@@ -4,11 +4,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('Home/','HomeController@index');
+Route::get('/','HomeController@index');
 Route::get('Home/add','HomeController@add');
 Route::post('Home/add','HomeController@create');
 Route::get('Home/edit','HomeController@edit');
