@@ -1,12 +1,13 @@
 <?php
 
-namespace App;
+namespace App\EloquentModel;
 
 use Illuminate\Database\Eloquent\Model;
 
-class key_result extends Model
+class Key_result extends Model
 {
     protected $guarded = ['id'];
+    protected $table = 'key_result';
 
         public function objective()
         {

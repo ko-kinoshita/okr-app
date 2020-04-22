@@ -11,12 +11,12 @@
                 document.getElementById('logout-form').submit();">
             {{ __('Logout') }}
         </a>
+        <a href=" {{ url('/Home/add') }} ">追加する</a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
         </form>
     </div>
 </header>
-
 
 @else
 <header>
@@ -53,16 +53,16 @@
         <h1 class="title">部門</h1>
         <div class="other_than_border_right"></div>
         <ul class="flex">
-            @foreach($objects as $object)
+            @foreach($group_objectives as $group_objective)
             <li class="wrap_objective">
                 <div class="group objective">
-                    <p class="group content">{{ $object->group_objective }}</p>
+                    <p class="group content">{{ $group_objective->group_objective }}</p>
                 </div>
             @endforeach
                 <ul class="flex ">
-                @foreach($results as $result)
+                @foreach($group_key_results as $group_key_result)
                     <li class="group key_result">
-                        <p class="content">{{ $result->group_key_result }}</p>
+                        <p class="content">{{ $group_key_result->group_key_result }}</p>
                     </li>
                 @endforeach
                 </ul>
@@ -74,15 +74,15 @@
         <h1 class="title">個人</h1>
         <div class="other_than_border_right"></div>
         <ul class="flex">
-        @foreach($objects as $object)
+        @foreach($individual_objectives as $individual_objective)
             <li class="wrap_objective">
                 <div class="individual objective">
-                    <p class="content">{{ $object->individual_objective  }}</p>
+                    <p class="content">{{ $individual_objective->individual_objective  }}</p>
                 </div>
                 <ul class="flex ">
-                @foreach($results as $result)
+                @foreach($individual_key_results as $individual_key_result)
                     <li class="individual key_result">
-                        <p class="content">{{ $result->individual_key_result }}</p>
+                        <p class="content">{{ $individual_key_result->individual_key_result }}</p>
                     </li>
                 @endforeach
                 </ul>
