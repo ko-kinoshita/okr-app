@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\EloquentModel\OKR;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -17,18 +18,32 @@ class HomeController extends Controller
         return view('home.index',
             ['objects'=>$objects],['results'=>$results],[$param]);
     }
+
     public function add(Request $request)
     {
         return view('home.add');
     }
+
+    public function create(Request $request)
+    {
+        $info = new OKR;
+        $form = $request->all();
+        unset($form['_token']);
+        $info->fill($form)->save();
+
+        return redirect('/');
+    }
+
     public function edit(Request $request)
     {
         return view('home.edit');
     }
+
     public function delete(Request $request)
     {
         return view('home.delete');
     }
+
     public function show(Request $request)
     {
         return view('home.show');

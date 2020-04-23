@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','HomeController@index');
 Route::get('Home/add','HomeController@add');
 Route::post('Home/add','HomeController@create');
+
 Route::get('Home/edit','HomeController@edit');
 Route::post('Home/edit','HomeController@update');
 Route::get('Home/delete','HomeController@delete');
