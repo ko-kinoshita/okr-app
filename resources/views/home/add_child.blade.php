@@ -1,4 +1,5 @@
 add_child
+子要素の追加
 
 <form action="/Home/add" method="post" class="add_infomation">
     {{ csrf_field() }}

@@ -1,4 +1,5 @@
 add
+OKRの追加
 
 <form action="/Home/add" method="post" class="add_infomation">
     {{ csrf_field() }}

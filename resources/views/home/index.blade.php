@@ -11,7 +11,7 @@
                 document.getElementById('logout-form').submit();">
             {{ __('Logout') }}
         </a>
-        <a href=" {{ url('/Home/add') }} ">追加する</a>
+        <a href=" {{ url('/Home/add') }} ">OKRを追加する</a>
 
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
@@ -39,6 +39,7 @@
             <ul>
                 @foreach($okrs as $okr)
                 <li class="company key_result top_key_result"  style="margin:20px;background:silver;color:black;">
+                    <p class="content">ID：{{ $okr->id }}</p>
                     <p class="content">objective：{{ $okr->objective }}</p>
                     <p class="content">key_result：{{ $okr->key_result }}</p>
                     <p class="content">parent_id：{{ $okr->parent_id }}</p>
