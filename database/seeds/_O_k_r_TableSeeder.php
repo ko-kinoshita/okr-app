@@ -34,16 +34,16 @@ class _O_k_r_TableSeeder extends Seeder
         ];
         DB::table('_o_k_r')->insert($param);
 
-        $param=[
-            'id' => 3,
-            'objective' => '従業員個人でも拡散',
-            'key_result' => '毎日ツイート',
-            'parent_id' => 3,
-            'master_flag' => false,
-            'created_at' => new DateTime(),
-            'updated_at' => new DateTime(),
-        ];
-        DB::table('_o_k_r')->insert($param);
+        // $param=[
+        //     'id' => 3,
+        //     'objective' => '従業員個人でも拡散',
+        //     'key_result' => '毎日ツイート',
+        //     'parent_id' => 3,
+        //     'master_flag' => false,
+        //     'created_at' => new DateTime(),
+        //     'updated_at' => new DateTime(),
+        // ];
+        // DB::table('_o_k_r')->insert($param);
 
     }
 }

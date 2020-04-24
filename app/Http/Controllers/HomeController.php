@@ -11,17 +11,35 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $objects = DB::table('objective')->get();
-        $results = DB::table('key_result')->get();
+        $okr = DB::table('_o_k_r')->get();
         $user = Auth::user();
         $param = ['user' => $user];
-        return view('home.index',
-            ['objects'=>$objects],['results'=>$results],[$param]);
+        return view('home.index',['okrs'=>$okr]);
     }
 
     public function add(Request $request)
     {
-        return view('home.add');
+        $id = null;
+        return view('home.add',['id'=>$id]);
+    }
+
+
+
+    public function add_child(Request $request,$id)
+    {
+        $okr = DB::table('_o_k_r')->get();
+
+        return view('home.add_child',['id'=>$id],['okrs'=>$okr]);
+    }
+
+    public function add_child_update(Request $request)
+    {
+        $info = new OKR;
+        $form = $request->all();
+        unset($form['_token']);
+        $info->fill($form)->save();
+
+        return redirect('/');
     }
 
     public function create(Request $request)
