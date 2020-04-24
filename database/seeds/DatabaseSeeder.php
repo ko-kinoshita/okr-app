@@ -12,8 +12,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            objectiveTableSeeder::class,
-            KeyResultTableSeeder::class,
+            _O_k_r_TableSeeder::class
         ]);
     }
 }
