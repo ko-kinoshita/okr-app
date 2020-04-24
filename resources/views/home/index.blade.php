@@ -43,7 +43,7 @@
                     <p class="content">key_result：{{ $okr->key_result }}</p>
                     <p class="content">parent_id：{{ $okr->parent_id }}</p>
                     <p class="content">masterflag：{{ $okr->master_flag }}</p>
-
+                    <a href=" {{ action('HomeController@add_child' , $okr->id )}} ">子要素の追加</a>
                 </li>
 
                 @endforeach
