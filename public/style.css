@@ -26,9 +26,9 @@
     text-align:center;
     margin:0 auto;
 }
-.company{
+/* .company{
     background-color: red;
-}
+} */
 .group{
     background-color: orange;
 }
@@ -63,4 +63,9 @@ header{
 }
 header .dropdown-menu{
     font-size:40px;
+}
+
+.company li{
+    background-color: red;
+    margin:12px;
 }

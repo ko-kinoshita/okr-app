@@ -27,7 +27,7 @@ class _O_k_r_TableSeeder extends Seeder
             'id' => 2,
             'objective' => 'SNSで拡散',
             'key_result' => '公式アカウントで毎日拡散',
-            'parent_id' => 2,
+            'parent_id' => 1,
             'master_flag' => false,
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
