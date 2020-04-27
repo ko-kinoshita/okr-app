@@ -62,8 +62,11 @@ class HomeController extends Controller
         return view('home.delete');
     }
 
-    public function show(Request $request)
+    public function show(Request $request,$id)
     {
-        return view('home.show');
+        $okr = DB::table('_o_k_r')->get();
+        $user = Auth::user();
+        $param = ['user' => $user];
+        return view('home.show',['okrs'=>$okr] ,['id'=>$id]);
     }
 }

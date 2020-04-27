@@ -58,14 +58,70 @@
 
 header{
     background-color: #eee;
-    display:flex;
     height:60px;
+    display:block;
+    border-bottom:solid 5px orange !important;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
 }
-header .dropdown-menu{
-    font-size:40px;
+.dropdown-menu{
+    font-size:20px;
+    float:right;
+    line-height:60px;
+
 }
+.dropdown-menu a{
+    margin:0 16px;
+
+}
+.okr_index{
+    float:left;
+    font-size:20px;
+    line-height:60px;
+}
+.okr_index a{
+    margin:0 16px;
+
+}
+
 
 .company li{
     background-color: red;
     margin:12px;
 }
+
+
+
+
+
+
+.add_wrap{
+    display: flex;
+    margin:0 40px;
+}
+.okr_document{
+
+
+}
+.okr_document p{
+    margin:12px;
+}
+
+.index_okr{
+    font-size:24px;
+    margin:20px;
+}
+.index_okr h2{
+    margin:12px 0;
+}
+.index_okr p{
+    font-size:20px;
+    margin-bottom:20px;
+}
+.index_okr h3{
+    font-size:16px;
+    display: inline;
+    border:5px solid #eee;
+}
+
+
+
