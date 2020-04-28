@@ -51,11 +51,12 @@
                 <li class="company key_result top_key_result">
                     <p class="content">{{ $okr->key_result }}</p>
                 </li>
-                <a href=" {{ action('HomeController@add_child' , $okr->id )}} ">OKRの追加</a>
-
-            @endif
+                <form method="post" action="/Home/{{$okr->id}}">
+                    {{ csrf_field() }}
+                    <input type="submit" value="OKRを削除" class="btn btn-danger btn-sm" onclick='return confirm("本当に削除しますか？");'>
+                </form>
+                @endif
             @endforeach
-
             </ul>
         </div>
     </section>
@@ -71,12 +72,15 @@
                 <ul class="company objective">
                     <li>
                         <p class="content">{{ $okr->objective }}</p>
-                    </li>
 
                     <li class="company key_result top_key_result">
                         <p class="content">{{ $okr->key_result }}</p>
                     </li>
-                    <a href=" {{ action('HomeController@add_child' , $okr->id )}} ">OKRの追加</a>
+                    <a href=" {{ action('HomeController@add_child' , $okr->id )}} ">OKRを追加</a>
+                    <form method="post" action="/Home/{{$okr->id }}">
+                        {{ csrf_field() }}
+                        <input type="submit" value="OKRを削除" class="btn btn-danger btn-sm" onclick='return confirm("本当に削除しますか？");'>
+                    </form>
                 </ul>
                 {{$parent=$okr->id}}
                 @php
@@ -103,6 +107,10 @@
                     <li class="company key_result top_key_result">
                         <p class="content">{{ $okr->key_result }}</p>
                     </li>
+                    <form method="post" action="/Home/{{$okr->id}}">
+                        {{ csrf_field() }}
+                        <input type="submit" value="OKRを削除" class="btn btn-danger btn-sm" onclick='return confirm("本当に削除しますか？");'>
+                    </form>
                 </ul>
                 @endif
                 @endforeach

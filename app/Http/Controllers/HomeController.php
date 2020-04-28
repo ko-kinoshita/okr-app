@@ -59,7 +59,8 @@ class HomeController extends Controller
 
     public function delete(Request $request)
     {
-        return view('home.delete');
+        OKR::find($request->id)->delete();
+        return redirect('/');
     }
 
     public function show(Request $request,$id)
