@@ -23,8 +23,6 @@ class HomeController extends Controller
         return view('home.add',['id'=>$id]);
     }
 
-
-
     public function add_child(Request $request,$id)
     {
         $okr = DB::table('_o_k_r')->get();
