@@ -44,7 +44,6 @@
             <ul class="company objective">
             @foreach($okrs as $okr)
             @if($okr->id == $id)
-            {{ $parent_id = $okr->id }}
                 <li>
                     <p class="content">{{ $okr->objective }}</p>
                 </li>
@@ -52,7 +51,7 @@
                 <li class="company key_result top_key_result">
                     <p class="content">{{ $okr->key_result }}</p>
                 </li>
-                <a href=" {{ action('HomeController@add_child' , $okr->id )}} ">子要素の追加</a>
+                <a href=" {{ action('HomeController@add_child' , $okr->id )}} ">OKRの追加</a>
 
             @endif
             @endforeach
@@ -68,8 +67,7 @@
         <div class="top_objective company_key_result">
             <div class="flex">
                 @foreach($okrs as $okr)
-                @if($okr->parent_id == $parent_id)
-                {{ $second_id = $okr->id }}
+                @if($okr->parent_id == $id)
                 <ul class="company objective">
                     <li>
                         <p class="content">{{ $okr->objective }}</p>
@@ -78,9 +76,13 @@
                     <li class="company key_result top_key_result">
                         <p class="content">{{ $okr->key_result }}</p>
                     </li>
-                    <a href=" {{ action('HomeController@add_child' , $okr->id )}} ">子要素の追加</a>
+                    <a href=" {{ action('HomeController@add_child' , $okr->id )}} ">OKRの追加</a>
                 </ul>
-
+                {{$parent=$okr->id}}
+                @php
+                    $hoge = array();
+                    $fuga = array_merge($hoge,array($okr->id));
+                @endphp
                 @endif
                 @endforeach
             </div>
@@ -92,7 +94,7 @@
         <div class="other_than_border_right"></div>
         <div class="flex">
                 @foreach($okrs as $okr)
-                {{-- @if($second_id== $okr->parent_id )--}}
+                @if($okr->parent_id == $parent)
                 <ul class="company objective">
                     <li>
                         <p class="content">{{ $okr->objective }}</p>
@@ -102,7 +104,7 @@
                         <p class="content">{{ $okr->key_result }}</p>
                     </li>
                 </ul>
-                {{-- @endif --}}
+                @endif
                 @endforeach
             </div>
     </section>
