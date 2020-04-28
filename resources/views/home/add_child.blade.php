@@ -1,5 +1,4 @@
 add_child
-子要素の追加
 @extends('home.app')
 
 @section('content')
@@ -7,8 +6,13 @@ add_child
 
 <form action="/Home/{id}/add_child" method="post" class="add_infomation">
     {{ csrf_field() }}
-    <p>objective</p><input type="text" name="objective" maxlength="30" style="width:300px;">
-    <p>key_result</p><input type="text" name="key_result" maxlength="30" style="width:300px;">
+    <div>
+        <p>objective</p><input type="text" name="objective" maxlength="30" style="width:300px;">
+    </div>
+    <div>
+        <p>key_result</p><input type="text" name="key_result" maxlength="30" style="width:300px;">
+
+    </div>
     <input type="text" style="display:none;" name="parent_id" value= {{$id}}>
     <input  type="text" style="display:none;" name="master_flag" value="0">
 
