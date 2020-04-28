@@ -50,12 +50,18 @@ class HomeController extends Controller
 
     public function create(Request $request)
     {
+        $validate_rule = [
+            'objective.required' => '必ず入力してください',
+            'key_result.required' => '必ず入力してください',
+        ];
+        $this->validate($request, $validate_rule);
+
         $info = new OKR;
         $form = $request->all();
         unset($form['_token']);
         $info->fill($form)->save();
 
-        return redirect('/');
+        return redirect('/',['msg'=>'入力しました']);
     }
 
     public function edit(Request $request)

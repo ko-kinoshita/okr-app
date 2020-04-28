@@ -4,11 +4,19 @@ OKRの追加
 
 @section('content')
 <div class="add_wrap">
+@if(count($errors) > 0)
+<ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+</ul>
+@endif
+
 <form action="/Home/add" method="post" class="add_infomation">
     {{ csrf_field() }}
     <p>objective</p><input type="text" name="objective" style="width:300px;">
     <p>key_result</p><input type="text" name="key_result" style="width:300px;">
-    <input type="text" style="display:none;" name="parent_id" value={{$id}}>
+    <input type="text" style="display:none;" name="parent_id" value=null>
     <input  type="text" style="display:none;" name="master_flag" value="1">
 
     <p><input type="submit" value="大もとのOKRを設定"></p>
