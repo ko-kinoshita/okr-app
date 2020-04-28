@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\EloquentModel\OKR;
 use Illuminate\Http\Request;
+use App\Http\Requests\okrRequest;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,6 +22,11 @@ class HomeController extends Controller
     {
         $id = null;
         return view('home.add',['id'=>$id]);
+    }
+
+    public function post(okrRequest $request)
+    {
+        return view('/',['msg'=>'正しく入力されました']);
     }
 
 
@@ -44,12 +50,18 @@ class HomeController extends Controller
 
     public function create(Request $request)
     {
+        $validate_rule = [
+            'objective.required' => '必ず入力してください',
+            'key_result.required' => '必ず入力してください',
+        ];
+        $this->validate($request, $validate_rule);
+
         $info = new OKR;
         $form = $request->all();
         unset($form['_token']);
         $info->fill($form)->save();
 
-        return redirect('/');
+        return redirect('/',['msg'=>'入力しました']);
     }
 
     public function edit(Request $request)
