@@ -59,12 +59,9 @@ class HomeController extends Controller
 
     public function update(Request $request)
     {
-        $param = [
-            'id' => $request->id,
-            'objective' => $request->objective,
-            'key_result' => $request->key_result,
-        ];
-        DB::table('_o_k_r')->where('id',$request->id)->update($param);
+        $form = $request->all();
+        unset($form['_token']);
+        DB::table('_o_k_r')->where('id',$request->id)->update($form);
 
         return redirect('/');
     }

@@ -15,8 +15,6 @@
         <p>KEY_RESULT</p><input type="text" name="key_result" style="width:500px; height:60px; font-size: 100%;" value={{$okr->key_result}}>
         @endif
         @endforeach
-        <input type="text" style="display:none;" name="parent_id" value={{$id}}>
-        <input type="text" style="display:none;" name="master_flag" value="1">
     <input type="submit" value="編集完了" class="button add_okr_btn">
 </form>
 
