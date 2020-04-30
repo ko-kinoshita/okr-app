@@ -7,13 +7,17 @@
 ## herokuへのデプロイ方法
 [herokuへのデプロイ方法](https://docs.google.com/document/d/1qJ_VOCOTJnjaIoZblAKYiwJN43LHd2qO_JCf-WKQqjY/edit?usp=sharing)
 
-DB
-
+## DB
 | Column | Type | 	Options |
 |:-----------|:------------|:------------|
-| ID      | bigIncrements    |     |
-| objective     | string  |     |
-| key_result       | string  |      |
-| parent_id         | unsignedBigInteger  | nullable  |
-| master_flag       | boolean  | efault(1)  |
-| time_stamp    | timestamps  | timestamps  |
+| ID       | bigIncrements    |      |
+| objective     | string      |      |
+| key_result    | string      |      |
+| parent_id     | unsignedBigInteger  | nullable |
+| master_flag   | boolean     | default(1) |
+| time_stamp    | timestamps  | timestamps |
+
+
+### 階層分け
+* 一階層目はmaster_flagがtrue(1)になっているもの　
++ 二階層目以降はparent_idを見て表示する、master_flagはfalse（0）
