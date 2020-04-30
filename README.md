@@ -10,7 +10,7 @@
 DB
 
 | Column | Type | 	Options |
-|:-----------|------------:|:------------:|
+|:-----------|:------------|:------------|
 | ID      | bigIncrements    |     |
 | objective     | string  |     |
 | key_result       | string  |      |
