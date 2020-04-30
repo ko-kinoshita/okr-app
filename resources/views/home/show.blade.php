@@ -19,11 +19,13 @@
                 <li class="key_result top_key_result">
                     <p class="content">{{ $okr->key_result }}</p>
                 </li>
-                <a href=" {{ action('HomeController@add_child' , $okr->id )}} ">OKRを追加</a>
-                <form method="post" action="/Home/{{$okr->id}}">
-                    {{ csrf_field() }}
-                    <input type="submit" value="OKRを削除" class="btn btn-danger btn-sm" onclick='return confirm("本当に削除しますか？");'>
-                </form>
+                <div class="flex add_okr_son">
+                    <a href=" {{ action('HomeController@add_child' , $okr->id )}} " class="button">OKRを追加</a>
+                    <form method="post" action="/Home/{{$okr->id}}">
+                        {{ csrf_field() }}
+                        <input type="submit" value="OKRを削除" class="button" onclick='return confirm("本当に削除しますか？");'>
+                    </form>
+                </div>
                 @endif
             @endforeach
             </ul>
@@ -45,11 +47,13 @@
                     <li class="key_result top_key_result">
                         <p class="content">{{ $okr->key_result }}</p>
                     </li>
-                    <a href=" {{ action('HomeController@add_child' , $okr->id )}} ">OKRを追加</a>
-                    <form method="post" action="/Home/{{$okr->id }}">
-                        {{ csrf_field() }}
-                        <input type="submit" value="OKRを削除" class="btn btn-danger btn-sm" onclick='return confirm("本当に削除しますか？");'>
-                    </form>
+                    <div class="flex add_okr_son">
+                        <a href=" {{ action('HomeController@add_child' , $okr->id )}} " class="button">OKRを追加</a>
+                        <form method="post" action="/Home/{{$okr->id }}">
+                            {{ csrf_field() }}
+                            <input type="submit" value="OKRを削除" class="button" onclick='return confirm("本当に削除しますか？");'>
+                        </form>
+                    </div>
                 </ul>
                 {{$parent = $okr->id}}
                 @endif
@@ -76,7 +80,7 @@
                         </li>
                         <form method="post" action="/Home/{{$okr->id}}">
                             {{ csrf_field() }}
-                            <input type="submit" value="OKRを削除" class="btn btn-danger btn-sm" onclick='return confirm("本当に削除しますか？");'>
+                            <input type="submit" value="OKRを削除" class="button" onclick='return confirm("本当に削除しますか？");'>
                         </form>
                     </ul>
                     @endif
