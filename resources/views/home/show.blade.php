@@ -13,11 +13,11 @@
             @foreach($okrs as $okr)
             @if($okr->id == $id)
                 <li>
-                    <p class="content">{{ $okr->objective }}</p>
+                    <p class="content top_content">{{ $okr->objective }}</p>
                 </li>
 
                 <li class="key_result top_key_result">
-                    <p class="content">{{ $okr->key_result }}</p>
+                    <p class="content top_content">{{ $okr->key_result }}</p>
                 </li>
                 <div class="flex add_okr_son">
                     <a href=" {{ action('HomeController@add_child' , $okr->id )}} " class="button">追加</a>
@@ -41,8 +41,8 @@
                 @foreach($okrs as $okr)
                 @if($okr->parent_id == $id)
                 <li class="okr_set">
-                    <p class="content">{{ $okr->objective }}</p>
-                    <p class="content">{{ $okr->key_result }}</p>
+                    <p class="content second_content">{{ $okr->objective }}</p>
+                    <p class="content second_content">{{ $okr->key_result }}</p>
                     <div class="flex add_okr_son">
                         <a href=" {{ action('HomeController@add_child' , $okr->id )}} " class="button">追加</a>
                         <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="button">編集</a>
@@ -69,8 +69,8 @@
                 @else
                     @if($okr->parent_id == $parent)
                     <li class="okr_set">
-                        <p class="content">{{ $okr->objective }}</p>
-                        <p class="content">{{ $okr->key_result }}</p>
+                        <p class="content third_content">{{ $okr->objective }}</p>
+                        <p class="content third_content">{{ $okr->key_result }}</p>
                         <div class="flex add_okr_son">
                             <a href=" {{ action('HomeController@edit' , $okr->id )}} " class="button">編集</a>
                             <form method="post" action="/Home/{{$okr->id}}">
