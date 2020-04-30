@@ -1,5 +1,15 @@
+/* show.blade.php */
 .okr{
     color:white;
+}
+.okr_set{
+    margin: 36px auto;
+    width: 200px;
+    text-align: center;
+}
+.okr_set li{
+    background-color: red;
+    margin:12px;
 }
 .section_wrap{
     display:flex;
@@ -17,24 +27,6 @@
 .content{
     padding:8px;
 }
-.objective{
-    margin:36px auto;
-    width:200px;
-    text-align:center;
-}
-.key_result{
-    text-align:center;
-    margin:0 auto;
-}
-/* .company{
-    background-color: red;
-} */
-.group{
-    background-color: orange;
-}
-.individual{
-    background-color: blue;
-}
 .other_than_border_right{
     height:150px;
     width:150px;
@@ -42,10 +34,6 @@
     border-width:3px 0 3px 3px;
     margin:40px;
 }
-.wrap_objective{
-    width:300px;
-}
-
 .top_objective{
     width:100%;
 }
@@ -55,7 +43,7 @@
     justify-content: space-between;
 }
 
-
+/* header.blade.php */
 header{
     background-color: #eee;
     height:60px;
@@ -66,37 +54,18 @@ header{
 .h-index{
     float:left;
 }
-.dropdown-menu{
+.menu{
     font-size:20px;
     line-height:60px;
 }
-.dropdown-menu a{
+.menu a{
     margin:0 16px;
 }
 .dropdown-menu-right{
     float:right;
 }
-.okr_index{
-    float:left;
-    font-size:20px;
-    line-height:60px;
-}
-.okr_index a{
-    margin:0 16px;
 
-}
-
-
-.company li{
-    background-color: red;
-    margin:12px;
-}
-
-
-
-
-
-
+/* 追加画面--add.blade.php--add_child.blade.php */
 .add_wrap{
     display: flex;
     margin:80px;
@@ -133,6 +102,7 @@ article.add_example p{
     font-weight: bold;
 }
 
+/* index.blade.php */
 .index_okr{
     font-size:24px;
     margin:20px;
