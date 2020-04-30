@@ -12,7 +12,7 @@
     <input type="text" style="display:none;" name="parent_id" value={{$id}}>
     <input type="text" style="display:none;" name="master_flag" value="1">
 
-    <p><input type="submit" value="OKRを設定" style="width:100px; height:24px;"></p>
+    <input type="submit" value="OKRを設定" class="button">
 </form>
 
 <div class="okr_document">

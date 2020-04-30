@@ -14,8 +14,8 @@ class _O_k_r_TableSeeder extends Seeder
     {
         $param=[
             'id' => 1,
-            'objective' => '日本一のラーメン屋',
-            'key_result' => '売り上げ300%',
+            'objective' => '日本一のラーメン屋を作る',
+            'key_result' => '売り上げ300%達成',
             'parent_id' => null,
             'master_flag' => true,
             'created_at' => new DateTime(),
@@ -25,8 +25,8 @@ class _O_k_r_TableSeeder extends Seeder
 
         $param=[
             'id' => 2,
-            'objective' => 'SNSで拡散',
-            'key_result' => '公式アカウントで毎日拡散',
+            'objective' => 'SNSで拡散する',
+            'key_result' => '公式アカウントを作りで毎日投稿',
             'parent_id' => 1,
             'master_flag' => false,
             'created_at' => new DateTime(),

@@ -11,7 +11,7 @@
     <p>KEY_RESULT</p><input type="text" name="key_result" maxlength="30" style="width:500px; height:40px; font-size: 100%;">
     <input type="text" style="display:none;" name="parent_id" value= {{$id}}>
     <input  type="text" style="display:none;" name="master_flag" value="0">
-    <p><input type="submit" value="追加する" style="width:100px; height:24px;"></p>
+    <input type="submit" value="追加する" class="button">
 </form>
 
 <div class="okr_document">
