@@ -7,12 +7,12 @@
 <div class="add_wrap">
 <form action="/Home/add" method="post" class="add_infomation">
     {{ csrf_field() }}
-    <p>OBJECTIVE</p><input type="text" name="objective" style="width:500px; height:40px; font-size: 100%;">
-    <p>KEY_RESULT</p><input type="text" name="key_result" style="width:500px; height:40px; font-size: 100%;">
+    <p>OBJECTIVE</p><input type="text" name="objective" style="width:500px; height:60px; font-size: 100%;">
+    <p>KEY_RESULT</p><input type="text" name="key_result" style="width:500px; height:60px; font-size: 100%;">
     <input type="text" style="display:none;" name="parent_id" value={{$id}}>
     <input type="text" style="display:none;" name="master_flag" value="1">
 
-    <input type="submit" value="OKRを設定" class="button">
+    <input type="submit" value="OKRを設定" class="button add_okr_btn">
 </form>
 
 <div class="okr_document">

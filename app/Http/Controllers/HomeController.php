@@ -50,9 +50,23 @@ class HomeController extends Controller
         return redirect('/');
     }
 
-    public function edit(Request $request)
+    public function edit(Request $request, $id)
     {
-        return view('home.edit');
+        $okr = DB::table('_o_k_r')->get();
+
+        return view('home.edit',['okrs'=>$okr],['id'=>$id]);
+    }
+
+    public function update(Request $request)
+    {
+        $param = [
+            'id' => $request->id,
+            'objective' => $request->objective,
+            'key_result' => $request->key_result,
+        ];
+        DB::table('_o_k_r')->where('id',$request->id)->update($param);
+
+        return redirect('/');
     }
 
     public function delete(Request $request)
