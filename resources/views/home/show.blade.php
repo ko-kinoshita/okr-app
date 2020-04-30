@@ -9,14 +9,14 @@
         
         <div class="other_than_border_right"></div>
         <div class="top_objective company_key_result">
-            <ul class="company objective">
+            <ul class="okr_set">
             @foreach($okrs as $okr)
             @if($okr->id == $id)
                 <li>
                     <p class="content">{{ $okr->objective }}</p>
                 </li>
 
-                <li class="company key_result top_key_result">
+                <li class="key_result top_key_result">
                     <p class="content">{{ $okr->key_result }}</p>
                 </li>
                 <a href=" {{ action('HomeController@add_child' , $okr->id )}} ">OKRを追加</a>
@@ -38,11 +38,11 @@
             <div class="flex">
                 @foreach($okrs as $okr)
                 @if($okr->parent_id == $id)
-                <ul class="company objective">
+                <ul class="okr_set">
                     <li>
                         <p class="content">{{ $okr->objective }}</p>
 
-                    <li class="company key_result top_key_result">
+                    <li class="key_result top_key_result">
                         <p class="content">{{ $okr->key_result }}</p>
                     </li>
                     <a href=" {{ action('HomeController@add_child' , $okr->id )}} ">OKRを追加</a>
@@ -66,12 +66,12 @@
                 @empty($parent)
                 @else
                     @if($okr->parent_id == $parent)
-                    <ul class="company objective">
+                    <ul class="okr_set">
                         <li>
                             <p class="content">{{ $okr->objective }}</p>
                         </li>
 
-                        <li class="company key_result top_key_result">
+                        <li class="key_result top_key_result">
                             <p class="content">{{ $okr->key_result }}</p>
                         </li>
                         <form method="post" action="/Home/{{$okr->id}}">
