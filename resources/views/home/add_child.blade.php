@@ -1,3 +1,4 @@
+<!-- 大もとのOKRから子要素（2階層目）のOKR作成画面 -->
 @extends('home.app')
 
 @include('home.header')

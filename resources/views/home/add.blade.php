@@ -1,3 +1,4 @@
+<!-- 大もとのOKR作成画面 -->
 @extends('home.app')
 
 @include('home.header')

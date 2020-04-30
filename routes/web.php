@@ -12,8 +12,8 @@ Route::get('/','HomeController@index');
 Route::get('Home/add','HomeController@add');
 Route::post('Home/add','HomeController@create');
 
-Route::post('Home/{id}','HomeController@delete');
 Route::get('/Home/{id}','HomeController@show')->name('show');
+Route::post('Home/{id}','HomeController@delete');
 
 Route::get('Home/{id}/add_child','HomeController@add_child');
 Route::post('Home/{id}/add_child','HomeController@add_child_update');
