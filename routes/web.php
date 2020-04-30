@@ -18,8 +18,9 @@ Route::post('Home/{id}','HomeController@delete');
 Route::get('Home/{id}/add_child','HomeController@add_child');
 Route::post('Home/{id}/add_child','HomeController@add_child_update');
 
-Route::get('Home/edit','HomeController@edit');
-Route::post('Home/edit','HomeController@update');
+Route::get('Home/{id}/edit','HomeController@edit');
+Route::post('Home/{id}/edit','HomeController@update');
+
 Route::get('Home/delete','HomeController@delete');
 Auth::routes();
 
