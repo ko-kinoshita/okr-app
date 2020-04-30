@@ -19,5 +19,5 @@
 
 
 ### 階層分け
-* 一階層目はmaster_flagがtrue(1)になっているもの　
-+ 二階層目以降はparent_idを見て表示する、master_flagはfalse（0）
+* 一階層目はmaster_flagが1(true)になっているもの　
++ 二階層目以降はparent_idを見て表示する、master_flagは0（false）
